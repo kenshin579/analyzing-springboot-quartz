@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class SampleService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SampleService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(SampleService.class);
 
-    public void hello(String jobName) {
-        LOG.info(">>>>> jobName = [" + jobName + "]" + " excuted.");
-    }
+	public void hello(String jobName) {
+		LOG.info(">>>>> jobName = [" + jobName + "]" + " excuted.");
+	}
 }

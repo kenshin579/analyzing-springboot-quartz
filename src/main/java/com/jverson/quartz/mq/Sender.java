@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Sender {
 
 	private static Logger logger = LoggerFactory.getLogger(Sender.class.getName());
-	
+
 	@Autowired
 	private AmqpTemplate amqpTemplate;
-	
-	public void send(String interfaceName){
+
+	public void send(String interfaceName) {
 		logger.info("interface: {} send mq", interfaceName);
 		amqpTemplate.convertAndSend("task", interfaceName);
 	}
-	
+
 }
